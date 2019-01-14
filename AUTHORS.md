@@ -10,4 +10,4 @@
 
 ## Contributors
 
-None yet. [Why not be the first?](CONTRIBUTING.md)
+[David Mougeolle](https://github.com/moodule) &lt;david.mougeolle@moodule.net&gt;
