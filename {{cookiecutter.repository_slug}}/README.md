@@ -1,4 +1,4 @@
-# {{cookiecutter.repo_slug}}
+# {{cookiecutter.repository_slug}}
 
 [![Tagged Release](https://img.shields.io/badge/release-v0-blue.svg?longCache=true)](CHANGELOG.md)
 [![Development Status](https://img.shields.io/badge/status-planning-lightgrey.svg?longCache=true)](ROADMAP.md)
@@ -6,9 +6,9 @@
 [![Build Status](https://img.shields.io/badge/build-pending-lightgrey.svg?longCache=true)](https://www.appveyor.com)
 [![Build Coverage](https://img.shields.io/badge/coverage-0%25-lightgrey.svg?longCache=true)](https://codecov.io)
 
-> {{cookiecutter.repo_tagline}}
+> {{cookiecutter.repository_tagline}}
 
-{{cookiecutter.repo_summary}}
+{{cookiecutter.repository_summary}}
 
 _**Note:** This project was initially created by [cookiecutter-git](https://github.com/NathanUrwin/cookiecutter-git)!_ :cookie:
 

@@ -75,9 +75,9 @@ def copy_cookie(x):
 
     :param x: invoke.context.Context
     """
-    x.run("cp -afrv cookiecutter.json '{{cookiecutter.repo_slug}}'")
-    x.run("cp -afrv hooks '{{cookiecutter.repo_slug}}'")
-    x.run("cp -afrv '{{cookiecutter.repo_slug}}' '{{cookiecutter.repo_slug}}'")
+    x.run("cp -afrv cookiecutter.json '{{cookiecutter.repository_slug}}'")
+    x.run("cp -afrv hooks '{{cookiecutter.repository_slug}}'")
+    x.run("cp -afrv '{{cookiecutter.repository_slug}}' '{{cookiecutter.repository_slug}}'")
 
 
 @task(name="format")

@@ -1,11 +1,12 @@
 {
-  "git_name": "David Mougeolle",
-  "git_email": "david.mougeolle@moodule.net",
+  "author_name": "David Mougeolle",
+  "author_email": "david.mougeolle@moodule.net",
+  
   "git_ignore": "windows,macos,linux,git",
 
-  "repo_slug": "cookiecutter-git-demo",
-  "repo_tagline": "A cookiecutter-git demonstration :tada:",
-  "repo_summary": "This project ...",
+  "repository_slug": "cookiecutter-git-demo",
+  "repository_tagline": "A cookiecutter-git demonstration :tada:",
+  "repository_summary": "This project ...",
 
   "remote_provider": ["github.com", "gitlab.com", "bitbucket.org", "none"],
   "remote_username": "moodule",
@@ -27,7 +28,7 @@
     "MPL-2.0",
     "Unlicense"
   ],
-  "copyright_holder": "{{ cookiecutter.git_name }}",
+  "copyright_holder": "{{ cookiecutter.author_name }}",
 
   "make_dirs": "docs,src,tests",
 

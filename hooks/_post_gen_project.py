@@ -140,8 +140,8 @@ class PostGenProjectHook(object):
     cookiecutter_json_filepath = os.path.join(
         repo_dirpath, "cookiecutter.json"
     )
-    raw_repo_slug_dirpath = os.path.join(
-        repo_dirpath, "{% raw %}{{cookiecutter.repo_slug}}{% endraw %}"
+    raw_repository_slug_dirpath = os.path.join(
+        repo_dirpath, "{% raw %}{{cookiecutter.repository_slug}}{% endraw %}"
     )
     github_dirpath = os.path.join(repo_dirpath, ".github")
     git_ignore_filepath = os.path.join(repo_dirpath, ".gitignore")
@@ -157,22 +157,22 @@ class PostGenProjectHook(object):
         self.result = self._get_cookiecutter_result()
         self.copyright_holder = self.result.get("copyright_holder")
         self.copyright_license = self.result.get("copyright_license")
-        self.git_email = self.result.get("git_email")
+        self.author_email = self.result.get("author_email")
         self.git_ignore = self.result.get("git_ignore")
-        self.git_name = self.result.get("git_name")
+        self.author_name = self.result.get("author_name")
         self.make_dirs = self.result.get("make_dirs")
         self.remote_namespace = self.result.get("remote_namespace")
         self.remote_protocol = self.result.get("remote_protocol")
         self.remote_provider = str(self.result.get("remote_provider")).lower()
         self.remote_username = self.result.get("remote_username")
-        self.repo_slug = self.result.get("repo_slug")
-        self.repo_summary = self.result.get("repo_summary")
-        self.repo_tagline = self.result.get("repo_tagline")
+        self.repository_slug = self.result.get("repository_slug")
+        self.repository_summary = self.result.get("repository_summary")
+        self.repository_tagline = self.result.get("repository_tagline")
         self._testing = str(self.result.get("_testing")).lower() == "true"
         #
         self.apache_license = self.copyright_license == "Apache-2.0"
         self.bitbucket_repos_url = self.bitbucket_repos_url_base.format(
-            self.remote_namespace, self.repo_slug
+            self.remote_namespace, self.repository_slug
         )
         self.git_ignore_url = self.git_ignore_url_base.format(self.git_ignore)
         self.nested_license_filepath = os.path.join(
@@ -188,8 +188,8 @@ class PostGenProjectHook(object):
             if dirname.strip()
         ]
         self.remote_data = {
-            "name": self.repo_slug,
-            "description": self.repo_tagline,
+            "name": self.repository_slug,
+            "description": self.repository_tagline,
         }
         self.create_remote_url = self._get_create_remote_url()
         self.encoded_data = json.dumps(self.remote_data).encode()
@@ -203,7 +203,7 @@ class PostGenProjectHook(object):
         )
         self.remote_message = (
             self.remote_message_base.format(
-                self.remote_provider, self.remote_namespace, self.repo_slug
+                self.remote_provider, self.remote_namespace, self.repository_slug
             )
             if self.remote_repo
             else ""
@@ -303,18 +303,18 @@ class PostGenProjectHook(object):
                 requests.utils.quote(self.remote_password, safe=""),
                 self.remote_provider,
                 self.remote_namespace,
-                self.repo_slug,
+                self.repository_slug,
             )
         else:
             remote_origin_url = "https://{}@{}/{}/{}.git".format(
                 requests.utils.quote(self.remote_username, safe=""),
                 self.remote_provider,
                 self.remote_namespace,
-                self.repo_slug,
+                self.repository_slug,
             )
         if self.remote_protocol == "ssh":
             remote_origin_url = "git@{}:{}/{}.git".format(
-                self.remote_provider, self.remote_namespace, self.repo_slug
+                self.remote_provider, self.remote_namespace, self.repository_slug
             )
         return remote_origin_url
 
@@ -388,7 +388,7 @@ class PostGenProjectHook(object):
         Creates a new .gitignore if needed from gitignore.io.
         """
         if self.new_git_ignore:
-            # gitignore.io/api -> {{cookiecutter.repo_slug}}/.gitignore
+            # gitignore.io/api -> {{cookiecutter.repository_slug}}/.gitignore
             response = requests.get(self.git_ignore_url)
             with open(self.git_ignore_filepath, "w") as f:
                 f.write(response.text)

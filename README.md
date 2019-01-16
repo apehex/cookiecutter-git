@@ -157,12 +157,12 @@ $ mkdir -p ~/Projects/NathanUrwin
 $ cd ~/Projects/NathanUrwin
 $ cookiecutter gh:NathanUrwin/cookiecutter-git
 You've downloaded /home/user/.cookiecutters/cookiecutter-git before. Is it okay to delete and re-download it? [yes]:
-git_name [Nathan Urwin]:
-git_email [me@nathanurwin.com]:
+author_name [Nathan Urwin]:
+author_email [me@nathanurwin.com]:
 git_ignore [windows,macos,linux,git]:
-repo_slug [cookiecutter-git-demo]:
-repo_tagline [A cookiecutter-git demonstration :tada:]:
-repo_summary [This project ...]:
+repository_slug [cookiecutter-git-demo]:
+repository_tagline [A cookiecutter-git demonstration :tada:]:
+repository_summary [This project ...]:
 Select remote_provider:
 1 - github.com
 2 - gitlab.com
@@ -266,19 +266,19 @@ Cookiecutter prompts explained in-depth. See [cookiecutter.json](cookiecutter.js
 
 Prompt | Explanation
 --- | ---
-`git_name` | Your full name, including first and last names, titles, and possibly even your middle name. This will go under *Core Contributor* in **AUTHORS.md**. See `git config --global user.name`
-`git_email` | Your git user email address you want associated with the repository. This will go under *Core Contributor* in **AUTHORS.md**. See `git config --global user.email`
+`author_name` | Your full name, including first and last names, titles, and possibly even your middle name. This will go under *Core Contributor* in **AUTHORS.md**. See `git config --global user.name`
+`author_email` | Your git user email address you want associated with the repository. This will go under *Core Contributor* in **AUTHORS.md**. See `git config --global user.email`
 `git_ignore` | A comma-separated values (csv) list of preset templates of paths for git to ignore. See the [gitignore.io README](https://github.com/joeblau/gitignore.io#list) for available values. This will be used to generate the **.gitignore** file.
-`repo_slug` | The repository name containing only alphanumeric characters and dashes. This will be the local, top-level directory name, the remote repo endpoint, and the *H1* in the **README.md**.
-`repo_tagline` | A short description about the repository in *50 words or less*. This will be the remote description setting, and the content under the *H1* in the **README.md**.
-`repo_summary` | A long description about the repository in *50 words or more*. This will go after the `repo_tagline` with the content under the *H1* in the **README.md**.
+`repository_slug` | The repository name containing only alphanumeric characters and dashes. This will be the local, top-level directory name, the remote repo endpoint, and the *H1* in the **README.md**.
+`repository_tagline` | A short description about the repository in *50 words or less*. This will be the remote description setting, and the content under the *H1* in the **README.md**.
+`repository_summary` | A long description about the repository in *50 words or more*. This will go after the `repository_tagline` with the content under the *H1* in the **README.md**.
 `remote_provider` | A choice between `bitbucket.org`, `github.com`, `gitlab.com`, or `none`. This option creates a remote repository for you, and is this project's main feature so defaults to `github.com`.
 `remote_username` | Your git `remote_provider` account username. This will be used for all git remote-based actions. This is accompanied with a `remote_password` prompt that is never saved.
 `remote_namespace` | Where the remote repository will live, which can be a user or organization, group, or team (depending on the `remote_provider`). Only used if `remote_provider` is not `none`.
 `remote_protocol` | A choice between the `https` and `ssh` protocols. Defaults to `https`, since those using `ssh` qualify as power users and should be able to handle setting up a [cookiecutter user config](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html).
 `code_of_conduct` | Adopt a code of conduct to define community standards, signal a welcoming and inclusive project, and outline procedures for handling abuse. A choice between the [Contributor Covenant](https://www.contributor-covenant.org/) or [Citizen Code of Conduct](http://citizencodeofconduct.org/).
 `copyright_license` | The copyright license for the repository. This will be used to generate the **LICENSE** and **NOTICE** files, and determines how end users can ultimately use your source code.
-`copyright_holder` | The individual or company that holds the intellectual property copyright. This will be used in the **LICENSE** file, rather than the `git_name`.
+`copyright_holder` | The individual or company that holds the intellectual property copyright. This will be used in the **LICENSE** file, rather than the `author_name`.
 `make_dirs` | A comma-separated values (csv) list of directory names which are made with **.gitkeep** files. Nested dirs work if the system path separator is correct! (For example: **tests/unit** for Mac/Linux or **tests\\\\unit** for Windows)
 
 ## Resources
@@ -291,7 +291,7 @@ Prompt | Explanation
 - [Create empty file using python](https://stackoverflow.com/questions/12654772/create-empty-file-using-python)
 - [Git Ignore Dot IO Docs](https://www.gitignore.io/docs)
 - [Bitbucket API Basic auth](https://developer.atlassian.com/bitbucket/api/2/reference/meta/authentication#basic-auth)
-- [Bitbucket API repos](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D#post)
+- [Bitbucket API repos](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepository_slug%7D#post)
 - [GitHub API Basic auth](https://developer.github.com/v3/#basic-authentication)
 - [GitHub API Create repos](https://developer.github.com/v3/repos/#create)
 - [GitLab Push to create a new project](https://docs.gitlab.com/ce/gitlab-basics/create-project.html#push-to-create-a-new-project)
