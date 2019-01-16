@@ -14,6 +14,7 @@
   "remote_protocol": ["https", "ssh"],
 
   "code_of_conduct": ["contributor_covenant", "citizen_code_of_conduct"],
+
   "copyright_license": [
     "MIT",
     "Apache-2.0",
@@ -26,7 +27,8 @@
     "LGPL-3.0",
     "EPL-1.0",
     "MPL-2.0",
-    "Unlicense"
+    "Unlicensed",
+    "Proprietary"
   ],
   "copyright_holder": "{{ cookiecutter.author_name }}",
 

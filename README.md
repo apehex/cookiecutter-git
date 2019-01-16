@@ -191,7 +191,8 @@ Select copyright_license:
 9 - LGPL-3.0
 10 - EPL-1.0
 11 - MPL-2.0
-12 - Unlicense
+12 - Unlicensed
+13 - Proprietary
 Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 [1]:
 copyright_holder [Nathan Urwin]:
 make_dirs [docs,src,tests]:
