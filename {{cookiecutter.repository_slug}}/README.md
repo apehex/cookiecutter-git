@@ -1,4 +1,5 @@
-# {{cookiecutter.repository_slug}}
+{% set is_open_source = cookiecutter.copyright_license != 'Proprietary' -%}
+# {{cookiecutter.repository_name}}
 
 [![Tagged Release](https://img.shields.io/badge/release-v0-blue.svg?longCache=true)](CHANGELOG.md)
 [![Development Status](https://img.shields.io/badge/status-planning-lightgrey.svg?longCache=true)](ROADMAP.md)
@@ -10,7 +11,9 @@
 
 {{cookiecutter.repository_summary}}
 
-_**Note:** This project was initially created by [cookiecutter-git](https://github.com/NathanUrwin/cookiecutter-git)!_ :cookie:
+{% if is_open_source %}
+* Free software: {{ cookiecutter.copyright_license }}
+{% endif %}
 
 ## Table of Contents
 
@@ -54,6 +57,11 @@ See [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
 See [AUTHORS](AUTHORS.md)
 
+This project was initially created with [Cookiecutter][1] and the custom [cookiecutter-git][2] :cookie:
+
 ## License
 
 See [LICENSE](LICENSE){% if cookiecutter.copyright_license == "Apache-2.0" %}, [NOTICE](NOTICE){% endif %}
+
+[1]: https://github.com/audreyr/cookiecutter
+[2]: https://github.com/moodule/cookiecutter-git
