@@ -9,9 +9,9 @@
   "repository_summary": "This project ...",
 
   "remote_provider": ["github.com", "gitlab.com", "bitbucket.org", "none"],
+  "remote_protocol": ["https", "ssh"],
   "remote_username": "moodule",
   "remote_namespace": "{{ cookiecutter.remote_username }}",
-  "remote_protocol": ["https", "ssh"],
 
   "code_of_conduct": ["contributor_covenant", "citizen_code_of_conduct"],
 
@@ -33,7 +33,5 @@
   ],
   "copyright_holder": "{{ cookiecutter.author_name }}",
 
-  "make_dirs": "docs,src,tests",
-
-  "_testing": false
+  "make_dirs": "docs,src,tests"
 }
