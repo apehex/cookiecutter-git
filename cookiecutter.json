@@ -4,6 +4,7 @@
   
   "git_ignore": "windows,macos,linux,git",
 
+  "repository_name": "Cookiecutter Git Demo",
   "repository_slug": "cookiecutter-git-demo",
   "repository_tagline": "A cookiecutter-git demonstration :tada:",
   "repository_summary": "This project ...",
