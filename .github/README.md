@@ -83,10 +83,6 @@ See [Usage](#usage)
 ```bash
 $ git clone https://github.com/NathanUrwin/cookiecutter-git
 $ cd cookiecutter-git
-$ pipenv install --dev --pre
-# before running tests you may have to run:
-$ pipenv run pip install -r requirements.txt
-$ pipenv run invoke tests
 ```
 
 See [CONTRIBUTING](#contributing)
