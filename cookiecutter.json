@@ -1,7 +1,7 @@
 {
-  "author_name": "David Mougeolle",
-  "author_email": "david.mougeolle@moodule.net",
-  
+  "author_name": moodule,
+  "author_email": "moodule@protonmail.com",
+
   "git_ignore": "windows,macos,linux,git",
 
   "repository_name": "Cookiecutter Git Demo",

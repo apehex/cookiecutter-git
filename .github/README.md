@@ -9,7 +9,7 @@
 
 > Git repo project template using Cookiecutter :cookie:
 
-[![Cookiecutter-Git Logo](images/logo-256.png)](https://dylantyates.com/graphics)
+[![Cookiecutter-Git Logo](../images/logo-256.png)](https://dylantyates.com/graphics)
 
 This project is inspired by [cookiecutter-template by eviweb](https://github.com/eviweb/cookiecutter-template), and consists of a [cookiecutter](https://github.com/audreyr/cookiecutter#cookiecutter) (project template) that provides the necessary [markdown](https://guides.github.com/features/mastering-markdown/) docs and other files to pass [GitHub's open source guidelines](https://opensource.guide/) with an added bonus: remote repos are created for you [*automagically*](https://youtu.be/Z3qK8gT5LLg?t=24s)! :crystal_ball::zap::boom:
 
@@ -97,6 +97,7 @@ See [CONTRIBUTING](#contributing)
 $ mkdir -p ~/Projects/NathanUrwin
 $ cd ~/Projects/NathanUrwin
 $ cookiecutter gh:NathanUrwin/cookiecutter-git
+
 ```
 
 See generated [README.md](https://github.com/NathanUrwin/cookiecutter-git-demo/blob/master/README.md)
@@ -108,22 +109,22 @@ See [cookiecutter-git-demo](https://github.com/NathanUrwin/cookiecutter-git-demo
 ```bash
 $ tree -a -I .git cookiecutter-git-demo
 cookiecutter-git-demo
-├── AUTHORS.md
-├── CHANGELOG.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
 ├── docs
 │   └── .gitkeep
 ├── .editorconfig
 ├── .github
+│   ├── AUTHORS.md
+│   ├── CHANGELOG.md
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
 │   ├── ISSUE_TEMPLATE
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
+│   │   ├── BUG_REPORT.md
+│   │   └── FEATURE_REQUEST.md
+│   ├── README.md
+│   ├── ROADMAP.md
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .gitignore
 ├── LICENSE
-├── README.md
-├── ROADMAP.md
 ├── src
 │   └── .gitkeep
 └── tests
@@ -134,7 +135,7 @@ cookiecutter-git-demo
 
 ## Documentation
 
-Cookiecutter prompts explained in-depth. See [cookiecutter.json](cookiecutter.json) for default values.
+Cookiecutter prompts explained in-depth. See [cookiecutter.json](../cookiecutter.json) for default values.
 
 Prompt | Explanation
 --- | ---
@@ -190,4 +191,4 @@ See [AUTHORS](AUTHORS.md)
 
 ## License
 
-See [LICENSE](LICENSE)
+See [LICENSE](../LICENSE)
