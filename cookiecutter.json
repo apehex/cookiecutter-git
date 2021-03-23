@@ -1,6 +1,6 @@
 {
-  "author_name": moodule,
-  "author_email": "moodule@protonmail.com",
+  "author_name": "apehex",
+  "author_email": "apehex@protonmail.com",
 
   "git_ignore": "windows,macos,linux,git",
 
@@ -11,7 +11,7 @@
 
   "remote_provider": ["github.com", "gitlab.com", "bitbucket.org", "none"],
   "remote_protocol": ["https", "ssh"],
-  "remote_username": "moodule",
+  "remote_username": "apehex",
   "remote_namespace": "{{ cookiecutter.remote_username }}",
 
   "code_of_conduct": ["contributor_covenant", "citizen_code_of_conduct"],

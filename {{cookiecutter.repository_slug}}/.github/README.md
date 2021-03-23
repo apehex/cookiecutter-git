@@ -70,7 +70,7 @@ This project was initially created with [Cookiecutter][cookiecutter] and the cus
 See [LICENSE](LICENSE){% if cookiecutter.copyright_license == "Apache-2.0" %}, [NOTICE](NOTICE){% endif %}
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
-[cookiecutter-git]: https://github.com/moodule/cookiecutter-git
+[cookiecutter-git]: https://github.com/apehex/cookiecutter-git
 
 [appveyor-shield]: https://ci.appveyor.com/api/projects/status/github/{{ cookiecutter.remote_namespace }}/{{ cookiecutter.repository_slug }}?branch=master&svg=true
 [appveyor-link]: https://ci.appveyor.com/project/{{ cookiecutter.remote_namespace }}/{{ cookiecutter.repository_slug }}/branch/master

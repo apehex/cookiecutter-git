@@ -10,6 +10,6 @@
 
 ## Contributors
 
-[Moodule](https://github.com/moodule) &lt;moodule@protonmail.com&gt;
+[Apehex](https://github.com/apehex) &lt;apehex@protonmail.com&gt;
 
 [Join us!](CONTRIBUTING.md)
